@@ -79,7 +79,7 @@ const createScene = () => {
   camera.targetScreenOffset.x = 0; //相机X轴偏移量
   camera.targetScreenOffset.y = 1; //相机Y轴偏移量
 
-  //光照射定
+  //光照設定
   var light01 = new BABYLON.SpotLight(
     "spotLight1",
     new BABYLON.Vector3(0, 1.5, 0),
@@ -88,7 +88,7 @@ const createScene = () => {
     50,
     scene
   );
-  light01.intensity = 30;
+  light01.intensity = 20;
   light01.diffuse = new BABYLON.Color3(0, 0.5, 0.5);
   light01.specular = new BABYLON.Color3(0.5, 0.5, 0);
 
@@ -118,15 +118,6 @@ const createScene = () => {
 
       //Scale the model down
       hero.scaling.scaleInPlace(0.5);
-
-      //Lock camera on the character
-      camera1.target = hero;
-
-      //Get the cube animation Group
-      const cubeAnim = scene.getAnimationGroupByName("cue");
-
-      //Play the Samba animation
-      cubeAnim.start(true, 1.0, cubeAnim.from, cubeAnim.to, false);
     }
   );
 
