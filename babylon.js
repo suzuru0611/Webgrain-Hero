@@ -77,7 +77,7 @@ const createScene = () => {
   camera.pinchPrecision = 500000;
   camera.inertia; //相机惯性
   camera.targetScreenOffset.x = 0; //相机X轴偏移量
-  camera.targetScreenOffset.y = 1; //相机Y轴偏移量
+  camera.targetScreenOffset.y = 0.7; //相机Y轴偏移量
 
   //光照設定
   var light01 = new BABYLON.SpotLight(
